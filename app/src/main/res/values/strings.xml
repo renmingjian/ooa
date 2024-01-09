@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OneStop-Android</string>
+    <string-array name="spinner_items">
+        <item>sandbox</item>
+        <item>uat</item>
+        <item>production</item>
+        <item>pre</item>
+        <item>sg</item>
+        <item>id</item>
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="custom_banner">
+        <attr name="indicatorGravity" format="enum">
+            <enum name="LEFT" value="1" />
+            <enum name="RIGHT" value="2" />
+            <enum name="CENTER" value="3" />
+        </attr>
+        <attr name="indicatorStyle" format="enum">
+            <enum name="NONE" value="1" />
+            <enum name="NUMBER" value="2" />
+            <enum name="ORDINARY" value="3" />
+        </attr>
+        <attr name="indicatorSelectRes" format="reference" />
+        <attr name="indicatorUnSelectRes" format="reference" />
+        <attr name="indicatorInterval" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="OSPButton">
+        <attr name="buttonText" format="string|reference" />
+        <attr name="buttonEnabled" format="boolean" />
+        <attr name="buttonSelectedColor" format="color|reference" />
+        <attr name="buttonUnSelectedColor" format="color|reference" />
+        <attr name="buttonRadius" format="dimension|reference" />
+        <attr name="buttonTextColor" format="color|reference" />
+        <attr name="buttonTextSize" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundRectImageView">
+        <attr name="image_radius" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleLayout">
+        <attr name="osp_title_show_back" format="boolean" />
+        <attr name="osp_title_text" format="string|reference" />
+    </declare-styleable>
+
+</resources>

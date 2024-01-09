@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:background="@drawable/popup_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/commonPopupTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/OSPHeadingFont"
+            tools:text="@string/selfie_2d_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/commonPopupContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textAppearance="@style/OSPContentFont"
+            tools:text="@string/selfie_2d_retry_content" />
+
+        <com.aai.core.views.OSPButton
+            android:id="@+id/btnYes"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/osp_button_height"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            app:buttonTextColor="@color/white"
+            app:buttonTextSize="16sp"
+            tools:buttonText="@string/selfie_2d_capture" />
+
+        <com.aai.core.views.OSPButton
+            android:id="@+id/btnNo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/osp_button_height"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            app:buttonTextColor="@color/white"
+            app:buttonTextSize="16sp"
+            tools:buttonText="@string/selfie_2d_move_forward" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

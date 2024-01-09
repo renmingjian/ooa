@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="osp_button_height">52dp</dimen>
+    <dimen name="osp_photo_radius">10dp</dimen>
+    <dimen name="osp_title_margin">45dp</dimen>
+    <dimen name="osp_title_margin_top">0dp</dimen>
+    <dimen name="osp_logo_space">50dp</dimen>
+</resources>

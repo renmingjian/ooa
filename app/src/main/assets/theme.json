@@ -1,0 +1,15 @@
+{
+  "error": false,
+  "faceScanSecurityChecks": {
+    "auditTrailVerificationCheckSucceeded": true,
+    "faceScanLivenessCheckSucceeded": false,
+    "replayCheckSucceeded": true,
+    "sessionTokenCheckSucceeded": true
+  },
+  "faceTecRetryScreen": null,
+  "retryScreenEnumInt": 0,
+  "success": false,
+  "scanResultBlob": "AQEAAABTAAAAAAAAAGJREK8L2wPdJnN+eLTRfp\/5mCjKbxxgTat4lurufEDMoHWv3lfU\/DdhzC73KJQSvES\/6+Pa1+u8dKt86bVd1Vz5ghsDtTaXrzsIyTzFHtyJqRSo",
+  "wasProcessed": true,
+  "ospResult": "FAILED"
+}

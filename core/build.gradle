@@ -1,0 +1,133 @@
+import java.nio.charset.StandardCharsets
+
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.aai.core'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 21
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+    android.buildFeatures.buildConfig true
+    buildTypes {
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "OSP_EVN", '"sandbox"'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "OSP_EVN", '"production"'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+/**
+ * 动态修改FaceTec的语言，保持和自己项目的语言设置逻辑完全一致。
+ * 该Task的作用是：在编译期间读取各种语言文件，保存到assets目录下为一个json文件，key是国家语言代码，value是对应国家
+ * 下的语言键值对综合，在初始化FaceTecSDK时，读取json文件 因为初始化SDK之前已经确定了当前的语言是什么，所以直接根据
+ * key读取对应的values集合即可。读取的结果设置给FaceTecSDK
+ */
+tasks.register('generateJsonTranslations') {
+    doLast {
+        println("generateJsonTranslations")
+        def allTranslations = [:]
+        def basePath = "${project.projectDir}/src/main/res"
+        def resFile = new File(basePath)
+        def valueList = new ArrayList()
+        def files = resFile.list()
+        for (final def path in files) {
+            if (path.contains("values")) {
+                valueList.add(path)
+            }
+        }
+        valueList.each { path ->
+            println("path = ${path}")
+            def splits = path.split("-")
+            def local = "en"
+            if (splits.size() > 1) {
+                local = splits[1]
+            }
+            def stringsFile = new File("${basePath}/${path}/strings.xml")
+//            println("stringsFile = ${stringsFile}, local = ${local}")
+            if (stringsFile.exists()) {
+                def parsedXml = new XmlParser().parse(stringsFile)
+                def translations = [:]
+                parsedXml.string.each { node ->
+                    translations[node.@name.toString()] = node.text()
+                }
+                allTranslations[local] = translations
+            }
+        }
+
+        // 将结果JSON保存到assets目录
+        def json = new groovy.json.JsonBuilder(allTranslations)
+        def assetsDir = new File(project.projectDir, "src/main/assets")
+        if (!assetsDir.exists()) {
+            assetsDir.mkdirs()
+        }
+        def file = new File(assetsDir, "osp_languages.json")
+        def jsonString = json.toPrettyString()
+
+        // 创建一个用于转换Unicode转义序列的函数
+        def unescapeUnicode = { String s ->
+            def matcher = s =~ /\\u([0-9a-fA-F]{4})/
+            matcher.replaceAll { matchResult ->
+                // 从匹配结果获取第一个捕获组，即Unicode数字部分
+                String hex = matchResult.group(1)
+                // 将Unicode数字转换为对应的字符
+                String.valueOf(Character.toChars(Integer.parseInt(hex, 16)))
+            }
+        }
+
+        // 转换Unicode转义序列并处理换行符
+        jsonString = unescapeUnicode(jsonString)
+        // 替换不需要的转义字符
+        jsonString = jsonString.replace("\\\\'", "'")  // 替换 \' 为 '
+        jsonString = jsonString.replace("\\\\n", "\\n") // 替换 \\n 为 \n
+        file.text = jsonString
+    }
+}
+
+//publishing {
+//    publications {
+//        maven(MavenPublication) {
+//            groupId = 'com.aai.osptt'
+//            artifactId = 'core'
+//            version = '1.0.0'
+//
+//            artifact("$buildDir/outputs/aar/iqa-release.aar")
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            name = "GitHubPackages"
+//            url = uri("https://maven.pkg.github.com/renmingjian/aart")
+//            credentials {
+//                username = "renmingjian"
+//                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+//            }
+//        }
+//    }
+//}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}

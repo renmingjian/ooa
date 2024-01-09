@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_white_radius30dp"
+        android:paddingStart="24dp"
+        android:paddingTop="60dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="50dp">
+
+        <RelativeLayout
+            android:id="@+id/rlTakePicture"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/stroke_gray_radius_8dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="24dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTakePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/doc_upload_popup_take_photo"
+                android:textAppearance="@style/OSPHeadingFont" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTakeSelected"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_success"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlUploadPicture"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/rlTakePicture"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/stroke_gray_radius_8dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="24dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUploadPicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/doc_upload_popup_upload_file"
+                android:textAppearance="@style/OSPHeadingFont" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUploadSelected"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_success"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

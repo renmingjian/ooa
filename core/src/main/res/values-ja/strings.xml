@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="osp_try_again">もう一度やり直してください</string>
+    <string name="osp_next">次</string>
+    <string name="nationalid_error_invalid_image_size">画像サイズが無効です。画像サイズは 50KB から 1MB の間、画像サイズは 460 * 460 から 4096 * 4096 の間である必要があります。</string>
+    <string name="nationalid_warn">警告</string>
+    <string name="osp_ok">わかりました</string>
+
+    <!-- error -->
+    <string name="net_work_error">Network abnormality, please check the network and try again!</string>
+    <string name="get_session_token_error">Unable to obtain session token.</string>
+
+    <!-- dialog loading -->
+    <string name="dialog_loading">「読み込み中」</string>
+    <string name="dialog_loading_content">リクエストを受け取り、対応中です。</string>
+
+    <string name="refresh_loading_title">「読み込み中」</string>
+    <string name="refresh_loading_text">アプリケーションは処理中です。しばらく待ってから更新ボタンをクリックしてください。</string>
+    <string name="refresh_loading_button">「リフレッシュ」</string>
+
+    <!-- start node -->
+    <string name="start_title">いらっしゃいませ！</string>
+    <string name="start_subtitle">数分で基本情報を収集して本人確認を行います。</string>
+    <string name="start_privacy1">「下のボタンをクリックすると、当社のベンダーである Advance AI が、身元確認、詐欺防止、製品の最適化を目的として、生体認証情報を含むお客様の身元情報を処理するためにサービス プロバイダーを利用することに同意したものとみなされます。」 </string>
+    <string name="start_privacy2">プライバシーポリシーに従ってください</string>
+    <string name="start_button">検証を開始</string>
+
+    <!-- common dialog -->
+    <string name="dialog_back_title">警告</string>
+    <string name="dialog_back_content">現在のプロセスを終了しますか？</string>
+    <string name="dialog_back_yes">現在のページに留まる</string>
+    <string name="dialog_back_no">終了</string>
+
+    <!-- selfie 2d -->
+    <string name="selfie_2d_title">「自撮り写真を撮ります」</string>
+    <string name="selfie_2d_subtitle">「自撮りの準備をしてください」</string>
+    <string name="selfie_2d_content">十分な光を確保してください。 \n 背景をきれいにしてください。 \n 顔が遮られていないことを確認してください。</string>
+    <string name="selfie_2d_capture">始める</string>
+    <string name="selfie_2d_retry_title">もう一度やり直してください</string>
+    <string name="selfie_2d_retry_content">「撮影されたセルフィーは当社の画質基準を満たしていない可能性があり、検証プロセスに影響を与える可能性があります。セルフィーを撮り直しますか?」</string>
+    <string name="selfie_2d_yes">はい</string>
+    <string name="selfie_2d_move_forward">「いいえ、先に進みます。」</string>
+
+    <!-- selfie 3d -->
+    <string name="selfie_3d_intro_title">「自撮り写真を撮ります」</string>
+    <string name="selfie_3d_intro_content">「提案をご案内します!」</string>
+    <string name="selfie_3d_intro_btn">準備できました</string>
+    <string name="selfie_3d_state_success">3D生体認証により正常に確認済み。</string>
+    <string name="selfie_3d_state_failed">あなたのアイデンティティを確認できませんでした。サポートにお問い合わせください。</string>
+    <string name="selfie_3d_error">生体検出失敗</string>
+
+    <!-- result node -->
+    <string name="result_success_title">「完了」</string>
+    <string name="result_success_content">おめでとうございます! 正常に認証されました。</string>
+    <string name="result_decline_title">ごめん</string>
+    <string name="result_decline_content">「身元を確認できませんでした。サポートにお問い合わせください。」</string>
+    <string name="result_pending_title">保留中</string>
+    <string name="result_pending_content">「検証プロセスが開始されましたが、完了していません。お待ちください…」</string>
+    <string name="result_button">終わり</string>
+
+    <!-- document node -->
+    <string name="doc_intro_title">「本人確認書類の提出」</string>
+    <string name="doc_intro_content">最初の試行で正しく行うための簡単なヒントをいくつか紹介します!</string>
+    <string name="doc_select_country_title">発行国を選択してください</string>
+    <string name="doc_select_country_subtitle">「発行国が発行した身分証明書の写真を撮ります。」</string>
+    <string name="doc_select_type_title">ドキュメントの種類を選択してください</string>
+    <string name="doc_select_type_subtitle">「あなたの身元を確認するために政府の身分証明書の写真が必要です。」</string>
+    <string name="doc_upload_title">書類をアップロード</string>
+    <string name="doc_failure_subtitle">身元を確認できませんでした。サポートにお問い合わせください。</string>
+    <string name="doc_failure_content">*ユーザーがアップロードした情報は18歳未満であるため、サービスを提供できません。</string>
+    <string name="doc_upload_back_size_tip">裏側をアップロードする必要があります</string>
+    <string name="doc_upload_popup_take_photo">写真を撮る</string>
+    <string name="doc_upload_popup_upload_file">ファイルをアップロードする</string>
+    <string name="doc_upload_replace_image">画像を置き換える</string>
+    <string name="doc_upload_replace_image_front">表の画像を置き換える</string>
+    <string name="doc_upload_replace_image_back">背面の画像を置き換える</string>
+    <string name="doc_upload_tip_image_front">ここをクリックして %{cardName} の前面をアップロードしてください</string>
+    <string name="doc_upload_tip_image_back">ここをクリックして %{cardName} の裏面をアップロードしてください</string>
+    <string name="doc_retry_title">残りの再試行チャンス:</string>
+    <string name="doc_retry_content">失敗しました。最大再試行回数を超えました!</string>
+    <string name="doc_retry_button">もう一度やり直してください</string>
+
+    <!-- retry -->
+    <string name="retry_times_left">残りの再試行チャンス: %d</string>
+
+    <string name="camera_permission_content">カメラのアクセス権が無効になっています。\nオペレーティングシステムとブラウザの設定を確認してください。</string>
+
+    <!-- FaceTec -->
+    <string name="FaceTec_action_im_ready">準備完了</string>
+    <string name="FaceTec_action_ok">OK</string>
+    <string name="FaceTec_action_try_again">もう一度試す</string>
+    <string name="FaceTec_camera_permission_enable_camera">カメラを有効にする</string>
+    <string name="FaceTec_camera_permission_header">カメラを有効にする</string>
+    <string name="FaceTec_camera_permission_launch_settings">設定を起動</string>
+    <string name="FaceTec_camera_permission_message_auth">カメラが無効になっています。以下をタップして設定を編集してください。</string>
+    <string name="FaceTec_camera_permission_message_enroll">以下のボタンをタップして、セルフィーカメラを有効にしてください。</string>
+    <string name="FaceTec_feedback_center_face">顔を中心に</string>
+    <string name="FaceTec_feedback_face_not_found">顔をフレーム内に</string>
+    <string name="FaceTec_feedback_face_not_looking_straight_ahead">真っすぐ前を見て</string>
+    <string name="FaceTec_feedback_face_not_upright">頭をまっすぐに</string>
+    <string name="FaceTec_feedback_hold_steady">安定させて</string>
+    <string name="FaceTec_feedback_move_phone_away">遠ざけて</string>
+    <string name="FaceTec_feedback_move_phone_closer">近づけて</string>
+    <string name="FaceTec_feedback_move_phone_to_eye_level">スマートフォンを目の高さに移動</string>
+    <string name="FaceTec_feedback_use_even_lighting">顔の照明を均等に</string>
+    <string name="FaceTec_initializing_camera">カメラフィードのセキュリティ確保中</string>
+    <string name="FaceTec_instructions_header_ready_1">準備を始めてください</string>
+    <string name="FaceTec_instructions_header_ready_2">あなたのビデオセルフィー</string>
+    <string name="FaceTec_instructions_message_ready_1">顔を楕円の中に収めてください</string>
+    <string name="FaceTec_instructions_message_ready_2">準備完了を押して、近づいてください</string>
+    <string name="FaceTec_presession_brighten_your_environment">環境を明るくしてください</string>
+    <string name="FaceTec_presession_conditions_too_bright">明るすぎる環境</string>
+    <string name="FaceTec_presession_frame_your_face">タロウの顔を楕円に合わせてください</string>
+    <string name="FaceTec_presession_hold_steady_1">1秒間静止してください</string>
+    <string name="FaceTec_presession_hold_steady_2">2秒間静止してください</string>
+    <string name="FaceTec_presession_hold_steady_3">3秒間静止してください</string>
+    <string name="FaceTec_presession_neutral_expression">中立的な表情、笑顔なし</string>
+    <string name="FaceTec_presession_position_face_straight_in_oval">まっすぐ前を見てください</string>
+    <string name="FaceTec_presession_remove_dark_glasses">サングラスを取り外してください</string>
+    <string name="FaceTec_result_facescan_upload_message">まだアップロード中…</string>
+    <string name="FaceTec_result_success_message">セルフィがキャプチャされました！</string>
+    <string name="FaceTec_retry_header">もう一度試しましょう</string>
+    <string name="FaceTec_retry_ideal_image_label">理想的なポーズ</string>
+    <string name="FaceTec_retry_instruction_message_1">反射光や極端な明るさがないこと</string>
+    <string name="FaceTec_retry_instruction_message_2">中立的な表情、笑顔なし</string>
+    <string name="FaceTec_retry_instruction_message_3">あいまいでなく、クリーンなカメラ</string>
+    <string name="FaceTec_retry_subheader_message">もっとクリアなビデオセルフィが必要です</string>
+    <string name="FaceTec_retry_your_image_label">あなたのセルフィー</string>
+
+</resources>

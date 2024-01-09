@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application>
+        <activity
+            android:name="com.aai.core.node.start.StartPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.OneStop" />
+        <activity
+            android:name="com.aai.core.webview.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.OneStop" />
+        <activity
+            android:name="com.aai.core.node.result.ResultPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.OneStop" />
+        <activity
+            android:name="com.aai.core.camera.EnableCameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.OneStop" />
+        <activity
+            android:name=".processManager.HandleProcessActivity"
+            android:launchMode="singleTask"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Translucent" />
+    </application>
+
+</manifest>

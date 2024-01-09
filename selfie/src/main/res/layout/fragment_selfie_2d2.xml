@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.aai.core.views.GuardianCameraView
+        android:id="@+id/guardianCameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginBottom="120dp"
+        android:layout_marginTop="26dp" />
+
+    <com.aai.core.views.FaceOverlayView
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginTop="26dp" />
+
+    <com.aai.core.views.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/osp_title_margin_top"
+        android:layout_marginEnd="16dp"
+        app:osp_title_text="@string/doc_select_country_title" />
+
+    <com.aai.core.views.OSPButton
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/osp_button_height"
+        android:layout_above="@+id/logo"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        app:buttonText="@string/selfie_2d_capture"
+        app:buttonTextColor="@color/white"
+        app:buttonTextSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+</RelativeLayout>

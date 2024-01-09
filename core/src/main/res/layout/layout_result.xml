@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textAppearance="@style/OSPHeadingFont"
+        tools:text="@string/result_success_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:textAppearance="@style/OSPContentFont"
+        tools:text="@string/result_success_content" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        tools:src="@drawable/result_decline" />
+
+    <com.aai.core.views.OSPButton
+        android:id="@+id/btnResult"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/osp_button_height"
+        android:layout_above="@+id/logo"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:paddingTop="11dp"
+        android:paddingBottom="10dp"
+        tools:text="@string/result_button" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+</RelativeLayout>
