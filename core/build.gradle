@@ -3,6 +3,42 @@ import java.nio.charset.StandardCharsets
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+}
+
+def githubProperties = new Properties()
+githubProperties.load(new FileInputStream(rootProject.file("gradle.properties")))
+
+
+def getVersionName = { ->
+    return "1.0.2" // 仓库版本
+}
+
+def getArtificatId = { ->
+    return "ooa" // 仓库Id
+}
+
+publishing {
+    publications {
+        bar(MavenPublication) {
+            groupId 'com.ooa.test' // 仓库组Id
+            artifactId "ooa"
+            version "1.0.2"
+            artifact("$buildDir/outputs/aar/core-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+
+            url = uri("https://maven.pkg.github.com/renmingjian/ooa")
+            credentials {
+                username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
+                password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
+            }
+        }
+    }
 }
 
 android {
